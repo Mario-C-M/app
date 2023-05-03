@@ -17,12 +17,32 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
-      <h1>Hola Mundo</h1>
-      
+    <div class="col-md-4">
+    </div>
+    <!-- Comienza la estructura card para login -->
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          Inicio de Sesión
+        </div>
+                <!-- Comienza formulario -->
+        <div class="card-body">
+           <div class="mb-3">
+             <label for="" class="form-label">Usuario</label>
+             <input type="text"
+               class="form-control" name="" 
+               id="" 
+               aria-describedby="helpId" 
+               placeholder="usuario">
+             <small id="helpId" class="form-text text-muted">Escriba su usuario</small>
+           </div>
+                <!-- fin formulario -->
+        </div>
+        
+      </div>
     </div>
   </div>
-
+<!-- Finaliza la estructura card para login -->
 </div>
   
   <!-- Bootstrap JavaScript Libraries -->
