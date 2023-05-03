@@ -1,7 +1,3 @@
-<?php
-echo ("Hola Mundo");
-?>
-
 <!doctype html>
 <html lang="en">
 
@@ -18,9 +14,17 @@ echo ("Hola Mundo");
 </head>
 
 <body>
-  <script>
-    alert("Hola Mundo");
-  </script>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Hola Mundo</h1>
+      
+    </div>
+  </div>
+
+</div>
+  
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
