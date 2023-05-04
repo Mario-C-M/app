@@ -21,24 +21,30 @@
     </div>
     <!-- Comienza la estructura card para login -->
     <div class="col-md-4">
+      <br>
       <div class="card">
         <div class="card-header">
-          Inicio de Sesión
+        Inicio de Sesión
         </div>
-                <!-- Comienza formulario -->
+        <!-- Comienza formulario -->
         <div class="card-body">
-           <div class="mb-3">
-             <label for="" class="form-label">Usuario</label>
-             <input type="text"
-               class="form-control" name="" 
-               id="" 
-               aria-describedby="helpId" 
-               placeholder="usuario">
-             <small id="helpId" class="form-text text-muted">Escriba su usuario</small>
-           </div>
-                <!-- fin formulario -->
+        <div class="mb-3">
+        <label for="" class="form-label">Usuario</label>
+        <input type="text"
+        class="form-control" name="usuario" id="usuario" aria-describedby="helpId" 
+        placeholder="usuario">
+        <small id="helpId" class="form-text text-muted">Escriba su usuario</small>
         </div>
-        
+        <div class="mb-3">
+        <label for="" class="form-label">Contraseña</label>
+        <input type="password"
+        class="form-control" name="contrasenia" id="contrasenia" aria-describedby="helpId" 
+        placeholder="password">
+          <small id="helpId" class="form-text text-muted">Escriba su contraseña</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+        <!-- fin formulario -->
+        </div>
       </div>
     </div>
   </div>
