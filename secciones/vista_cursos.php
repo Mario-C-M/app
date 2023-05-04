@@ -10,7 +10,7 @@
                 <div class="card-header">Cursos</div>
                 <div class="card-body">
                 <div class="mb-3">
-                    <label for="" class="form-label">ID</label>
+                    <label for="id" class="form-label">ID</label>
                     <input type="text" 
                             class="form-control" 
                             name="id" 
