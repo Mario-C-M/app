@@ -1,5 +1,5 @@
 <?php include('../templates/cabecera.php'); 
 ?>
-contenido principal
+control de los alumnos
 <?php include('../templates/pie.php'); 
 ?>

@@ -22,6 +22,7 @@
     <!-- Comienza la estructura card para login -->
     <div class="col-md-4">
       <br>
+      <form action="secciones/index.php" method="post">
       <div class="card">
         <div class="card-header">
         Inicio de Sesión
@@ -40,14 +41,15 @@
         <input type="password"
         class="form-control" name="contrasenia" id="contrasenia" aria-describedby="helpId" 
         placeholder="password">
-          <small id="helpId" class="form-text text-muted">Escriba su contraseña</small>
+        <small id="helpId" class="form-text text-muted">Escriba su contraseña</small>
         </div>
         <button type="submit" class="btn btn-primary">Iniciar sesión</button>
         <!-- fin formulario -->
         </div>
-      </div>
+      </form>
     </div>
   </div>
+</div>
 <!-- Finaliza la estructura card para login -->
 </div>
   
