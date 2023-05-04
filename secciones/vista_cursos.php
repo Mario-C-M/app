@@ -27,18 +27,15 @@
                 </div> 
 
                 <div class="btn-group" role="group" aria-label="">
-                    <button type="button" class="btn btn-primary">Agregar</button>
-                    <button type="button" class="btn btn-secondary">Editar</button>
-                    <button type="button" class="btn btn-dark">Borrar</button>
+                    <button type="submit" name="accion" value="agregar" class="btn btn-primary">Agregar</button>
+                    <button type="submit" name="accion" value="editar" class="btn btn-secondary">Editar</button>
+                    <button type="submit" name="accion" value="borrar" class="btn btn-dark">Borrar</button>
                 </div>
 
                 </div>
             </div>
 </div>
 </form>
-
-
-
 
 
 <div class="col-md-7">
@@ -54,11 +51,14 @@
             </tr>
         </thead>
         <tbody>
+            <?php foreach($listaCursos as $curso){ ?> 
+                <!-- listaCursos coincide con listaCursos de cursos.php -->
             <tr class="">
-                <td>1</td>
-                <td>Primer curso</td>
+                <td><?php echo $curso['id'];?> </td> <!-- Campo id de la bd -->
+                <td><?php echo $curso['nombre_curso'];?> </td> <!-- Campo nombre_curso de la tabla cursos de la bd -->
                 <td>Seleccionar</td>
             </tr>
+            <?php } ?>
         </tbody>
     </table>
 </div>
