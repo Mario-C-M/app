@@ -10,11 +10,18 @@ $id=isset($_POST['id'])?$_POST['id']:'';
 $nombre_curso=isset($_POST['nombre_curso'])?$_POST['nombre_curso']:'';
 //identificar la acción del usuario
 $accion= isset($_POST['accion'])?$_POST['accion']:''; //Evalúa el contenido por medio del isset y qué acción realiza el usuario
+
+print_r($_POST);
+
 if ($accion!=''){ //si la acción es diferente de vacío
     switch ($accion) { //evalúa la acción
         case 'agregar': //realiza un INSERT
-            $sql="INSERT INTO cursos(id, nombre_curso) VALUES(NULL, '$nombre_curso')";
-            echo $sql;
+
+            $sql="INSERT INTO cursos(id, nombre_curso) VALUES(NULL, :nombre_curso)";
+            $consulta=$conexionBD->prepare($sql); //prepara la consulta
+            $consulta->bindParam(':nombre_curso',$nombre_curso);//pasamos un parámetro
+            $consulta->execute();//ejecutamos
+            
             break;
             case 'editar': //realiza un UPDATE
             $sql="UPDATE cursos SET nombre_curso='$nombre_curso' WHERE id='$id'";
@@ -23,6 +30,15 @@ if ($accion!=''){ //si la acción es diferente de vacío
             case 'borrar': //realiza un DELETE
             $sql="DELETE FROM cursos WHERE id='$id'";
             echo $sql;
+            break;
+            case 'Seleccionar': //seleccionamos el recurso
+            $sql="SELECT * FROM cursos WHERE id=:id"; //se busca el id
+            $consulta=$conexionBD->prepare($sql); //prepara la consulta
+            $consulta->bindParam(':id',$id); //pasamos el parámetro
+            $consulta->execute(); //ejecutamos
+            $curso=$consulta->fetch(PDO::FETCH_ASSOC);//obtiene la información con fetch_assoc de todos los recursos recuperados del SELECT id
+            print_r($curso); //se imprime el array
+
             break;
     }
 }

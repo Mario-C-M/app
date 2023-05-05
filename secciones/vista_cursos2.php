@@ -56,13 +56,7 @@
             <tr class="">
                 <td><?php echo $curso['id'];?> </td> <!-- Campo id de la bd -->
                 <td><?php echo $curso['nombre_curso'];?> </td> <!-- Campo nombre_curso de la tabla cursos de la bd -->
-                <!-- <td>Seleccionar</td> lo reemplazamos por un formulario por  método POST -->
-                <td>
-                    <form action="" method="post">
-                        <input type="hidden" name="id" id="id" value="<?php echo $curso['id'];?>" />
-            </br>
-                        <input type="submit" value="Seleccionar" name="accion" class="btn btn-primary">
-                    </form>
+                <td>Seleccionar</td>
             </tr>
             <?php } ?>
         </tbody>
