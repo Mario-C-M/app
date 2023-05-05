@@ -10,19 +10,21 @@
                 <div class="card-header">Cursos</div>
                 <div class="card-body">
                 <div class="mb-3">
-                    <label for="id" class="form-label">ID</label>
+                    <label for="id" class="form-label">ID</label> <!-- formulario para el campo id -->
                     <input type="text" 
                             class="form-control" 
                             name="id" 
                             id="id"
+                            value="<?php echo $id;?>"
                             aria-describedby="helpId" placeholder="ID">
                 </div>
                 <div class="mb-3">
-                    <label for="nombre_curso" class="form-label">Nombre</label>
+                    <label for="nombre_curso" class="form-label">Nombre</label> <!-- formulario para el campo nombre_curso -->
                     <input type="text" 
                     class="form-control" 
                     name="nombre_curso" 
                     id="nombre_curso" 
+                    value="<?php echo $nombre_curso;?>"
                     aria-describedby="HelpId" placeholder="Nombre del curso">
                 </div> 
 
