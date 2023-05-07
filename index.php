@@ -1,8 +1,19 @@
+<?php
+if($_POST){
+
+$mensaje='Usuario o contraseña incorrectos';
+
+if($_POST['usuario']=='admin' && $_POST['password']=='admin'){
+  $_SESSION['usuario']=$_POST['usuario'];
+  header('Location: secciones/index.php');
+}
+}
+?>
 <!doctype html>
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>Acceso a la aplicación</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,26 +37,33 @@
     <!-- Comienza la estructura card para login -->
     <div class="col-md-4">
       <br>
-      <form action="secciones/index.php" method="post">
+      <form action="" method="post">
       <div class="card">
         <div class="card-header">
         Inicio de Sesión
         </div>
         <!-- Comienza formulario -->
         <div class="card-body">
+
+        <?php if(isset($mensaje)) {?>
+                    <div class="alert alert-dark" role="alert">
+                      <strong><?php echo $mensaje; ?></strong>
+                    </div>
+                  <?php } ?>
+
         <div class="mb-3">
         <label for="" class="form-label">Usuario</label>
         <input type="text"
         class="form-control" name="usuario" id="usuario" aria-describedby="helpId" 
         placeholder="usuario">
-        <small id="helpId" class="form-text text-muted">Escriba su usuario</small>
+        <!-- <small id="helpId" class="form-text text-muted">Escriba su usuario</small> -->
         </div>
         <div class="mb-3">
         <label for="" class="form-label">Contraseña</label>
         <input type="password"
-        class="form-control" name="contrasenia" id="contrasenia" aria-describedby="helpId" 
+        class="form-control" name="password" id="password" aria-describedby="helpId" 
         placeholder="password">
-        <small id="helpId" class="form-text text-muted">Escriba su contraseña</small>
+        <!-- <small id="helpId" class="form-text text-muted">Su contraseña</small> -->
         </div>
         <button type="submit" class="btn btn-primary">Iniciar sesión</button>
         <!-- fin formulario -->

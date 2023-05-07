@@ -1,3 +1,13 @@
+
+<?php 
+//session_start();
+
+//if(!isset($_SESSION['usuario'])){
+  //header('Location:../index.php');
+//}
+
+?> 
+
 <!doctype html>
 <html lang="en">
 
@@ -20,7 +30,7 @@
                 <a class="nav-item nav-link active" href="index.php" aria-current="page">Inicio</a>
                 <a class="nav-item nav-link" href="vista_alumnos.php">Alumnos</a>
                 <a class="nav-item nav-link" href="vista_cursos.php">Cursos</a>
-                <a class="nav-item nav-link" href="#">Cerrar sesión</a>
+                <a class="nav-item nav-link" href="cerrar.php">Cerrar sesión</a>
             </div>
         </nav>
     <!-- Fin del menú de navegación -->
