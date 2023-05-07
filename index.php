@@ -15,9 +15,13 @@
 
 <body>
 
+  
+
 <div class="container">
+  
   <div class="row">
     <div class="col-md-4">
+
     </div>
     <!-- Comienza la estructura card para login -->
     <div class="col-md-4">

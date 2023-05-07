@@ -49,13 +49,13 @@ if($accion!=""){
             $apellidos=$alumno['apellidos'];
             
             $sql="SELECT cursos.id FROM alumnos_cursos 
-            INNER JOIN cursos ON cursos.id=alumnos_cursos.idcurso 
+            INNER JOIN cursos ON cursos.id=alumnos_cursos.idcurso
             WHERE alumnos_cursos.idalumno=:idalumno";
             $consulta=$conexionBD->prepare($sql);
             $consulta->bindParam(':idalumno',$id);
             $consulta->execute();
             $cursosAlumno=$consulta->fetchAll(PDO::FETCH_ASSOC);
-
+            
          
 
             foreach($cursosAlumno as $curso){

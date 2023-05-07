@@ -1,5 +1,5 @@
 <?php include('../templates/cabecera.php'); 
 ?>
-contenido principal
+<h6>Bienvenidos a la aplicación CRUD</h6>
 <?php include('../templates/pie.php'); 
 ?>

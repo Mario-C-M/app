@@ -29,7 +29,7 @@
             </div>
             
             <div class="mb-3">
-              <label for="" class="form-label">Cursos del alumno:</label>
+              <label for="" class="form-label">Cursos:</label>
 
               <select multiple class="form-control" name="cursos[]" id="listaCursos">
                 
